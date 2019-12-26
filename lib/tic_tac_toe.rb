@@ -73,4 +73,8 @@ end
 
     false
   end
+
+  def full?
+    @board.none? { |pos| pos == " " }
+  end
 end
