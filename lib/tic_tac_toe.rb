@@ -41,4 +41,8 @@ end
   def turn_count
     @board.count { |pos| pos != " " }
   end
+
+  def current_player
+    turn_count.even? ? "X" : "O"
+  end
 end
