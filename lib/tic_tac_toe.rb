@@ -40,5 +40,5 @@ end
 
   def turn_count
     @board.count { |pos| pos != " " }
-end
+  end
 end
