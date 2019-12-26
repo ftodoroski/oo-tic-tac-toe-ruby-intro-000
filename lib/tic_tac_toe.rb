@@ -97,6 +97,6 @@ end
   end
 
   def winner
-    !won? ? nil : @board[won?(board)[0]]
+    !won? ? nil : @board[won?[0]]
   end
 end
