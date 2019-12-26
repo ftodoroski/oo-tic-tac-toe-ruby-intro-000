@@ -37,4 +37,8 @@ end
   def valid_move?(position)
     position.between?(0, 8) && !position_taken?(position)
   end
+
+  def turn_count
+    @board.count { |pos| pos != " " }
+end
 end
