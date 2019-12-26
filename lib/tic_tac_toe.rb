@@ -45,4 +45,20 @@ end
   def current_player
     turn_count.even? ? "X" : "O"
   end
+
+  def turn
+    puts "Please choose a position 1-9:"
+    user_input = gets.strip
+    converted = input_to_index(user_input)
+    player_token = current_player
+
+    until valid_move?(converted)
+      puts "Please choose a position 1-9:"
+      player_input = gets.strip
+      converted = input_to_index(player_input)
+    end
+
+    move(converted, player_token)
+    display_board
+  end
 end
