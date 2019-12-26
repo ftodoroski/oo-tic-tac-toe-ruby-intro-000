@@ -95,4 +95,8 @@ end
         false
     end
   end
+
+  def winner(board)
+    !won?(board) ? nil : board[won?(board)[0]]
+  end
 end
