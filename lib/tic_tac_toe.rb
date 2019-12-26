@@ -61,4 +61,16 @@ end
     move(converted, player_token)
     display_board
   end
+
+  def won?
+    WIN_COMBINATIONS.each do |winn_combo|
+        if @board[winn_combo[0]] == "X" && @board[winn_combo[1]] == "X" && @board[winn_combo[2]] == "X"
+            return winn_combo
+        elsif @board[winn_combo[0]] == "O" && @board[winn_combo[1]] == "O" && @board[winn_combo[2]] == "O"
+            return winn_combo
+        end
+    end
+
+    false
+  end
 end
