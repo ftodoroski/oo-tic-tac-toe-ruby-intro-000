@@ -78,7 +78,7 @@ end
     @board.none? { |pos| pos == " " }
   end
 
-  def draw?(board)
+  def draw?
     if full?(board) && !won?(board)
         return true
     elsif !won?(board)
@@ -86,5 +86,5 @@ end
     elsif won?(board)
         return false
     end
-  end 
+  end
 end
