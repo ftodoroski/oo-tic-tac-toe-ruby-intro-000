@@ -29,4 +29,8 @@ end
   def move(position, player_token)
     @board[position] = player_token
   end
+
+  def position_taken?(position)
+  !(@board[position] == " ")
+end
 end
